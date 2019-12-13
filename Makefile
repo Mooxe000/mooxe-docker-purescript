@@ -12,8 +12,9 @@ in:
 		--name mooxe_purescript \
 			--rm \
 			-ti \
+			-v $$(pwd):/root/purescript \
 			${ImageName} \
-			/bin/bash
+				/bin/bash
 
 publish:
 	docker push ${ImageName}
